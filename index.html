@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Xì Dách Online</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🃏 Xì Dách Online</h1>
+      <p class="sub">Chủ phòng = Cái · Bạn bè vào bằng mã phòng</p>
+    </header>
+
+    <section id="home" class="panel">
+      <div class="grid2">
+        <div>
+          <h2>Tạo phòng</h2>
+          <input id="hostName" maxlength="20" placeholder="Tên của bạn">
+          <button id="createBtn">Tạo phòng — Tôi là Cái</button>
+        </div>
+        <div>
+          <h2>Vào phòng</h2>
+          <input id="joinName" maxlength="20" placeholder="Tên người chơi">
+          <input id="roomCode" maxlength="8" placeholder="Mã phòng">
+          <button class="secondary" id="joinBtn">Vào phòng</button>
+        </div>
+      </div>
+      <div id="homeMsg" class="msg"></div>
+    </section>
+
+    <section id="room" class="hidden">
+      <div class="topbar panel">
+        <div>
+          <strong>Phòng: <span id="roomCodeView"></span></strong>
+          <span class="badge" id="roleView"></span>
+        </div>
+        <button id="copyBtn" class="secondary">📋 Sao chép mã mời</button>
+      </div>
+
+      <div class="table panel">
+        <div class="dealer">
+          <div class="seatTitle">👑 CÁI — <span id="dealerName"></span></div>
+          <div id="dealerCards" class="cards"></div>
+          <div id="dealerScore" class="score"></div>
+        </div>
+
+        <div id="players" class="players"></div>
+      </div>
+
+      <div class="controls panel">
+        <div id="hostControls">
+          <button id="startBtn">🃏 Chia bài</button>
+          <button id="resetBtn" class="secondary">Ván mới</button>
+        </div>
+        <div id="playerControls" class="hidden">
+          <button id="hitBtn">➕ Rút</button>
+          <button id="standBtn" class="secondary">✋ Dằn</button>
+        </div>
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="panel rules">
+        <b>Luật nhanh:</b> A = 1 hoặc 11 · J/Q/K = 10 · mục tiêu gần 21 nhất.
+        Xì dách (A + 10/J/Q/K) thắng đặc biệt. Người chơi quá 21 là quắc.
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
