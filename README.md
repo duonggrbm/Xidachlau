@@ -35,7 +35,7 @@ Nếu chủ phòng đóng tab/trình duyệt hoặc mất mạng, phòng sẽ m�
 - Mục tiêu gần 21 nhất.
 - Quá 21 = quắc.
 - A + 10/J/Q/K ở 2 lá đầu = Xì dách.
-- Cái tự rút đến tối thiểu 17.
+- Cái tự rút đến tối thiểu 15.
 - So điểm để xác định thắng/hòa/thua.
 
 ## Giới hạn bản đầu
